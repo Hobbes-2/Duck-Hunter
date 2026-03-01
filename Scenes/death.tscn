@@ -34,5 +34,12 @@ theme_override_fonts/font = ExtResource("1_mna5k")
 theme_override_font_sizes/font_size = 60
 text = "No..."
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1079520332]
+z_index = -1
+layout_mode = 0
+offset_right = 1168.0
+offset_bottom = 608.0
+color = Color(0.6001935, 0.95366114, 0.9363976, 1)
+
 [connection signal="pressed" from="YesButton" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]
