@@ -1,25 +1,33 @@
 [gd_scene format=3 uid="uid://dca1qtmrsim76"]
 
+[ext_resource type="Script" uid="uid://c1h42nppt2p2x" path="res://scripts/title_page.gd" id="1_u7noh"]
+
 [node name="TitlePage" type="Node2D" unique_id=1063053476]
+script = ExtResource("1_u7noh")
 
 [node name="Start" type="Button" parent="." unique_id=1956016255]
-offset_left = 64.0
-offset_top = 104.0
-offset_right = 110.0
-offset_bottom = 135.0
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 448.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 60
 text = "Start"
 
 [node name="Label" type="Label" parent="." unique_id=384972348]
-offset_left = 8.0
+offset_left = 112.0
 offset_top = 8.0
-offset_right = 417.0
-offset_bottom = 77.0
-theme_override_font_sizes/font_size = 50
-text = "TITLE GOES HERE"
+offset_right = 1031.0
+offset_bottom = 213.0
+theme_override_font_sizes/font_size = 150
+text = "Duck Hunter"
 
 [node name="Quit" type="Button" parent="." unique_id=113996646]
-offset_left = 64.0
-offset_top = 144.0
-offset_right = 106.0
-offset_bottom = 175.0
+offset_left = 704.0
+offset_top = 320.0
+offset_right = 1024.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 60
 text = "Quit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
