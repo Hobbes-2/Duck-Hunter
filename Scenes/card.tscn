@@ -5,15 +5,50 @@
 
 [node name="Card" type="CharacterBody2D" unique_id=1710167673]
 script = ExtResource("1_wf8id")
+speedmod = 10
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=342993071]
 position = Vector2(0, -1.9073486e-06)
 scale = Vector2(0.8164062, 1.2148438)
 texture = ExtResource("2_brehn")
 
-[node name="ColorRect" type="ColorRect" parent="Icon" unique_id=993385860]
-offset_left = -58.794262
-offset_top = -59.266876
-offset_right = 58.794262
-offset_bottom = 59.26687
-color = Color(0, 1, 1, 1)
+[node name="DamageCard" type="ColorRect" parent="Icon" unique_id=993385860]
+visible = false
+offset_left = -127.387566
+offset_top = -111.948555
+offset_right = 117.588524
+offset_bottom = 105.36332
+color = Color(0.91885203, 0, 0.04235366, 1)
+
+[node name="HealthCard" type="ColorRect" parent="Icon" unique_id=80024378]
+visible = false
+offset_left = -127.387566
+offset_top = -111.948555
+offset_right = 117.588524
+offset_bottom = 105.36332
+color = Color(1.92523e-06, 0.5686182, 0.20717669, 1)
+
+[node name="FirerateCard" type="ColorRect" parent="Icon" unique_id=1921239691]
+visible = false
+offset_left = -127.387566
+offset_top = -111.948555
+offset_right = 117.588524
+offset_bottom = 105.36332
+color = Color(0.81727433, 0.00012196332, 0.6831345, 1)
+
+[node name="SpeedCard" type="ColorRect" parent="Icon" unique_id=754983596]
+visible = false
+offset_left = -127.387566
+offset_top = -111.948555
+offset_right = 117.588524
+offset_bottom = 105.36332
+color = Color(0, 0.59627956, 0.7025012, 1)
+
+[node name="Button" type="Button" parent="." unique_id=822720584]
+visible = false
+offset_left = -104.0
+offset_top = -136.0
+offset_right = 96.0
+offset_bottom = 128.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
