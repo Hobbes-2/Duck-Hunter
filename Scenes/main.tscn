@@ -1,16 +1,3 @@
 [gd_scene format=3 uid="uid://bji4vbijl8o0q"]
 
-[ext_resource type="PackedScene" uid="uid://b77f5n1pp7n8s" path="res://Scenes/duck.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://b5htjyh3pjxtg" path="res://Scenes/bullet.tscn" id="2_8gbba"]
-
 [node name="Main" type="Node2D" unique_id=1523394194]
-
-[node name="Duck" parent="." unique_id=1655506650 instance=ExtResource("1_bo1nx")]
-position = Vector2(540, 411)
-
-[node name="Bullet" parent="." unique_id=2034719816 instance=ExtResource("2_8gbba")]
-position = Vector2(592, 441)
-script = null
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=847374697]
-position = Vector2(574, 322)
