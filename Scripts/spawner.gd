@@ -5,7 +5,7 @@ class_name Spawner
 @export var rate : float
 @export var player : PlayerController
 var enemy = preload("res://Scenes/enemy_1.tscn")
-
+@export var yes : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +23,8 @@ func spawn():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if MainGlobal.round_over == true:
-		MainGlobal.round += 1
 		enemiesToSpawn += MainGlobal.round
 		spawn()
-		MainGlobal.round_over = false
+		if yes:
+			MainGlobal.round_over = false
+			MainGlobal.round += 1
