@@ -45,7 +45,6 @@ func _physics_process(delta: float) -> void:
 		currentBullet.look_at(direction_to_mouse)
 		currentBullet.rotation_degrees = hand.rotation_degrees
 		currentBullet.dir = direction_to_mouse
-		print(direction_to_mouse)
 		get_parent().add_child(currentBullet)
 		
 	if health <= 0:

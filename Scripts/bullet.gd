@@ -8,7 +8,6 @@ var numberEntered = 0
 var maxNum = 4
 func _physics_process(delta: float) -> void:
 	velocity = dir * speed
-	print(velocity)
 
 	move_and_slide()
 
