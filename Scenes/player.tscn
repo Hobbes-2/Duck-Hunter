@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dnkiqygyk4xd4"]
+
+[ext_resource type="Script" uid="uid://depcrx6i8swcl" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_v0iea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D" unique_id=575605269]
+script = ExtResource("1_cvnsp")
+
+[node name="Arm" type="CharacterBody2D" parent="." unique_id=1535522740]
+
+[node name="Sprite2D" type="Sprite2D" parent="Arm" unique_id=1051478854]
+position = Vector2(64, 0)
+rotation = 1.5707964
+scale = Vector2(0.25, 1)
+texture = ExtResource("1_v0iea")
+
+[node name="Hand" type="CharacterBody2D" parent="Arm" unique_id=1750588425]
+position = Vector2(-127.99999, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1629004851]
+shape = SubResource("RectangleShape2D_cvnsp")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="." unique_id=1106781838]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1403002292]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0, 1, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1333783914]
