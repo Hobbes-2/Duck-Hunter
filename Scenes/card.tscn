@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmyubm8d35e0q"]
 
-[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://Scripts/card.gd" id="1_wf8id"]
+[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://scripts/card.gd" id="1_wf8id"]
 [ext_resource type="Texture2D" uid="uid://ihaygos7k7vw" path="res://Assets/CardArt.png" id="2_wf8id"]
 
 [node name="Card" type="CharacterBody2D" unique_id=1710167673]

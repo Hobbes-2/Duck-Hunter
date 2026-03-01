@@ -19,8 +19,7 @@ shape = SubResource("CircleShape2D_oduel")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=514584128]
 position = Vector2(0, 2.3841858e-07)
-scale = Vector2(0.17773438, 0.18359375)
-texture = ExtResource("1_xjght")
+texture = ExtResource("2_oduel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1987506815]
 shape = SubResource("RectangleShape2D_oduel")
