@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnkiqygyk4xd4"]
 
-[ext_resource type="Script" uid="uid://depcrx6i8swcl" path="res://scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://depcrx6i8swcl" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://duxwqwetf4mfj" path="res://Assets/pixil-frame-0 (1).png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://momcl5yrj6m3" path="res://Assets/pixil-frame-0.png" id="3_vgqql"]
 
@@ -33,15 +33,18 @@ texture = ExtResource("3_vgqql")
 zoom = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="Camera2D" unique_id=824145514]
-offset_left = -568.0
-offset_top = -328.0
-offset_right = -248.0
-offset_bottom = -216.0
-theme_override_font_sizes/font_size = 30
+offset_left = -264.0
+offset_top = -144.0
+offset_right = 56.0
+offset_bottom = -32.0
+theme_override_font_sizes/font_size = 20
 
 [node name="RoundLabel" type="Label" parent="Camera2D" unique_id=676500963]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 176.0
+offset_top = -144.0
+offset_right = 216.0
+offset_bottom = -116.0
+theme_override_font_sizes/font_size = 20
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=650216147]
 collision_mask = 3

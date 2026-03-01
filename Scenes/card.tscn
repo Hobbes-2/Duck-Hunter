@@ -7,52 +7,36 @@
 script = ExtResource("1_wf8id")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=342993071]
+visible = false
 position = Vector2(0, -1.9073486e-06)
 scale = Vector2(0.8164062, 1.2148438)
 
 [node name="DamageCard" type="Sprite2D" parent="Icon" unique_id=425542593]
-visible = false
 position = Vector2(-156.7847, -7.6293945e-06)
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 texture = ExtResource("2_wf8id")
 
 [node name="DamageLabel" type="Label" parent="Icon/DamageCard" unique_id=1098506690]
-offset_left = -9.799042
-offset_top = -19.755638
-offset_right = 9.799042
-offset_bottom = 22.244362
-theme_override_font_sizes/font_size = 30
-
-[node name="DamageButton" type="Button" parent="Icon/DamageCard" unique_id=417953724]
-modulate = Color(1, 1, 1, 0)
-offset_left = -19.59809
-offset_top = -26.340858
-offset_right = 19.598093
-offset_bottom = 32.926018
+offset_top = -16.463018
+offset_right = 19.598085
+offset_bottom = 25.536982
+rotation = 1.5707964
+theme_override_font_sizes/font_size = 15
 
 [node name="HealthCard" type="Sprite2D" parent="Icon" unique_id=1747433509]
-visible = false
 position = Vector2(-78.39235, -7.6293945e-06)
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 texture = ExtResource("2_wf8id")
 
 [node name="HealthLabel" type="Label" parent="Icon/HealthCard" unique_id=2089004036]
-offset_left = 107.78948
-offset_top = 85.60771
-offset_right = 147.78949
-offset_bottom = 108.60771
-theme_override_font_sizes/font_size = 30
-
-[node name="HealthButton" type="Button" parent="Icon/HealthCard" unique_id=1338339701]
-modulate = Color(1, 1, 1, 0)
-offset_left = -19.598085
-offset_top = -26.340843
-offset_right = 19.598097
-offset_bottom = 32.926033
+offset_left = -9.799044
+offset_top = -6.585205
+offset_right = -8.799044
+offset_bottom = 1.4147949
+theme_override_font_sizes/font_size = 15
 
 [node name="FirerateCard" type="Sprite2D" parent="Icon" unique_id=1021034077]
-visible = false
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 texture = ExtResource("2_wf8id")
 
 [node name="FirerateLabel" type="Label" parent="Icon/FirerateCard" unique_id=794100463]
@@ -60,19 +44,11 @@ offset_left = 107.78948
 offset_top = 98.77813
 offset_right = 147.78949
 offset_bottom = 140.77814
-theme_override_font_sizes/font_size = 30
-
-[node name="FirerateButton" type="Button" parent="Icon/FirerateCard" unique_id=1375403630]
-modulate = Color(1, 1, 1, 0)
-offset_left = -19.598083
-offset_top = -26.34083
-offset_right = 19.598114
-offset_bottom = 32.92604
+theme_override_font_sizes/font_size = 15
 
 [node name="SpeedCard" type="Sprite2D" parent="Icon" unique_id=179787583]
-visible = false
 position = Vector2(-235.17706, -7.6293945e-06)
-scale = Vector2(2, 2)
+scale = Vector2(4, 4)
 texture = ExtResource("2_wf8id")
 
 [node name="SpeedLabel" type="Label" parent="Icon/SpeedCard" unique_id=1103571011]
@@ -80,14 +56,7 @@ offset_left = 107.78948
 offset_top = 92.19292
 offset_right = 147.78949
 offset_bottom = 115.19292
-theme_override_font_sizes/font_size = 30
-
-[node name="SpeedButton" type="Button" parent="Icon/SpeedCard" unique_id=836543852]
-modulate = Color(1, 1, 1, 0)
-offset_left = -19.598091
-offset_top = -26.340836
-offset_right = 19.598076
-offset_bottom = 32.926033
+theme_override_font_sizes/font_size = 15
 
 [node name="Button" type="Button" parent="." unique_id=822720584]
 visible = false
@@ -97,15 +66,15 @@ offset_right = 96.0
 offset_bottom = 128.0
 
 [node name="SpawnPoint1" type="Node2D" parent="." unique_id=1092728420]
-position = Vector2(-64, 0)
+position = Vector2(-192, 0)
+
+[node name="ColorRect" type="ColorRect" parent="SpawnPoint1" unique_id=1385841090]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="SpawnPoint2" type="Node2D" parent="." unique_id=531517434]
 
 [node name="SpawnPoint3" type="Node2D" parent="." unique_id=279943040]
-position = Vector2(64, 0)
+position = Vector2(192, 0)
 
-[connection signal="pressed" from="Icon/DamageCard/DamageButton" to="." method="_on_damage_button_pressed"]
-[connection signal="pressed" from="Icon/HealthCard/HealthButton" to="." method="_on_health_button_pressed"]
-[connection signal="pressed" from="Icon/FirerateCard/FirerateButton" to="." method="_on_firerate_button_pressed"]
-[connection signal="pressed" from="Icon/SpeedCard/SpeedButton" to="." method="_on_speed_button_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1873572953]

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c1p7ya5t3acqq"]
 
-[ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://scripts/enemy_1.gd" id="1_jwqgc"]
-[ext_resource type="Texture2D" uid="uid://celj5mtgkumbj" path="res://Assets/pixil-frame-0 (3).png" id="2_0a874"]
+[ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://Scripts/enemy_1.gd" id="1_jwqgc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqgc"]
 size = Vector2(30, 32)
