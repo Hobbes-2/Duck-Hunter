@@ -1,6 +1,10 @@
-extends RigidBody2D
+extends CharacterBody2D
 
 var speed = 500
 var pos
+var dir
 func _physics_process(delta: float) -> void:
-	apply_impulse(Vector2(100, 100), Vector2.ZERO)
+	velocity = dir * speed
+	print(velocity)
+
+	move_and_slide()
