@@ -2,6 +2,7 @@ extends Node2D
 class_name Spawner
 
 @export var enemiesToSpawn : int
+@export var rate : float
 @export var player : PlayerController
 var enemy = preload("res://Scenes/enemy_1.tscn")
 
@@ -13,7 +14,7 @@ func _ready() -> void:
 		currEnemy.global_position = global_position
 		currEnemy.player = player
 		add_child(currEnemy)
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(rate).timeout
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var player : PlayerController
 
-const speed = 30.0
+const speed = 150.0
 
 @onready var nav: NavigationAgent2D = $Nav
 var label
@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 
 	label.text = "Flowers:" + str(MainGlobal.flowers)
 
-
 func _on_hitbox_body_entered(body):
+	if !body.is_in_group("Enemy"):
 		health -= 1
 		#body.queue_free()

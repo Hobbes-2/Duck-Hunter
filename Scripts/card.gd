@@ -34,17 +34,31 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	if card == "DamageCard":
 		damagemod = randi_range(1, 10)
-		MainGlobal.damage += damagemod
-		damage_card.get_child(0).text = "Damage: +" + str(damagemod)
+		damage_card.get_child(0).text = "Damage: +" + str(damagemod + MainGlobal.round)
 	elif card == "HealthCard":
 		healthmod = randi_range(1, 10)
-		MainGlobal.health += healthmod
-		health_card.get_child(0).text = "Health: +" + str(healthmod)
+		health_card.get_child(0).text = "Health: +" + str(healthmod + MainGlobal.round)
 	elif card == "FirerateCard":
 		fireratemod = randi_range(1, 10)
-		MainGlobal.fire_rate += fireratemod
-		firerate_card.get_child(0).text = "Firerate: +" + str(fireratemod)
+		firerate_card.get_child(0).text = "Firerate: +" + str(fireratemod + MainGlobal.round)
 	elif card == "SpeedCard":
 		speedmod = randi_range(1, 10)
-		MainGlobal.speed += speedmod
-		speed_card.get_child(0).text = "Speed: +" + str(speedmod)
+		speed_card.get_child(0).text = "Speed: +" + str(speedmod + MainGlobal.round)
+
+
+func _on_damage_button_pressed() -> void:
+	MainGlobal.damage += damagemod + MainGlobal.round
+	MainGlobal.round_over = false
+
+func _on_health_button_pressed() -> void:
+	MainGlobal.health += healthmod + MainGlobal.round
+	MainGlobal.round_over = false
+
+func _on_firerate_button_pressed() -> void:
+	MainGlobal.fire_rate += fireratemod + MainGlobal.round
+	MainGlobal.round_over = false
+
+
+func _on_speed_button_pressed() -> void:
+	MainGlobal.speed += speedmod + MainGlobal.round
+	MainGlobal.round_over = false
