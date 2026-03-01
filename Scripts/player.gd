@@ -8,6 +8,7 @@ var speed = 300.0
 @onready var arm: CharacterBody2D = $Arm
 @onready var hand: Node2D = $Arm/Hand
 @onready var hand_sprite: Sprite2D = $Arm/HandSprite
+var bullet = preload("res://Scenes/bullet.tscn")
 
 func _ready() -> void:
 	pass
@@ -27,6 +28,13 @@ func _physics_process(delta: float) -> void:
 	arm.look_at(get_global_mouse_position())
 	hand.look_at(get_global_mouse_position())
 	move_and_slide()
+
+
+	if Input.is_action_just_pressed("Shoot"):
+		var currentBullet = bullet.instantiate()
+		currentBullet.global_position = hand.global_position
+		currentBullet.pos = (get_global_mouse_position())
+		add_child(currentBullet)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
