@@ -1,33 +1,30 @@
 [gd_scene format=3 uid="uid://c1p7ya5t3acqq"]
 
 [ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://Scripts/enemy_1.gd" id="1_jwqgc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqgc"]
-size = Vector2(30, 32)
+[ext_resource type="Texture2D" uid="uid://celj5mtgkumbj" path="res://Assets/pixil-frame-0 (3).png" id="2_0a874"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0a874"]
-size = Vector2(40, 40)
+size = Vector2(28, 29)
 
-[node name="Enemy1" type="CharacterBody2D" unique_id=792112215 groups=["Enemy"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lssre"]
+
+[node name="Enemy_1" type="CharacterBody2D" unique_id=797046334 groups=["Enemy"]]
+z_index = 2
 collision_mask = 2
 script = ExtResource("1_jwqgc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676871442]
-position = Vector2(-3, 3)
-shape = SubResource("RectangleShape2D_jwqgc")
+[node name="Nav" type="NavigationAgent2D" parent="." unique_id=26717314]
 
-[node name="Nav" type="NavigationAgent2D" parent="." unique_id=180285085]
-
-[node name="Hitbox" type="Area2D" parent="." unique_id=315651550]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=777762421]
-position = Vector2(-2.5, 2)
-scale = Vector2(0.86, 0.86)
-shape = SubResource("RectangleShape2D_0a874")
-
-[node name="PixilFrame0(3)" type="Sprite2D" parent="." unique_id=1981764042]
-position = Vector2(1, -6)
-scale = Vector2(1.5, 1.5)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=757674539]
 texture = ExtResource("2_0a874")
 
-[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1016227716]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1866687765]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_0a874")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121468561]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_lssre")

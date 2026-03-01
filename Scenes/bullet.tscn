@@ -1,31 +1,27 @@
 [gd_scene format=3 uid="uid://b5htjyh3pjxtg"]
 
 [ext_resource type="Script" uid="uid://w4erynfphwao" path="res://Scripts/bullet.gd" id="1_oduel"]
-[ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_xjght"]
+[ext_resource type="Texture2D" uid="uid://0xokqe81hcyl" path="res://Assets/pixil-frame-0 (2).png" id="2_oduel"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_oduel"]
-radius = 16.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycag2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oduel"]
 
-[node name="Bullet" type="CharacterBody2D" unique_id=2079537301]
-collision_mask = 2
+[node name="Bullet" type="CharacterBody2D" unique_id=760204067]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_oduel")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1901212063]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=777806586]
-shape = SubResource("CircleShape2D_oduel")
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=514584128]
-position = Vector2(0, 2.3841858e-07)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1865692799]
 texture = ExtResource("2_oduel")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1987506815]
+[node name="Area2D" type="Area2D" parent="." unique_id=2015183736]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1714339617]
+shape = SubResource("CircleShape2D_ycag2")
+
+[node name="Timer" type="Timer" parent="." unique_id=501310781]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1217096031]
 shape = SubResource("RectangleShape2D_oduel")
-
-[node name="Lifespan" type="Timer" parent="." unique_id=531144988]
-wait_time = 7.0
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]
+disabled = true
