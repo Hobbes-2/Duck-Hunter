@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5htjyh3pjxtg"]
 
-[ext_resource type="Script" uid="uid://w4erynfphwao" path="res://scripts/bullet.gd" id="1_oduel"]
+[ext_resource type="Script" uid="uid://w4erynfphwao" path="res://Scripts/bullet.gd" id="1_oduel"]
 [ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_xjght"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oduel"]
