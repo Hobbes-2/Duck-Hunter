@@ -29,4 +29,10 @@ shape = SubResource("RectangleShape2D_0a874")
 position = Vector2(-2, 6)
 shape = SubResource("RectangleShape2D_lssre")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1792055965]
+emitting = false
+lifetime = 0.5
+one_shot = true
+gravity = Vector2(0, 0)
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
