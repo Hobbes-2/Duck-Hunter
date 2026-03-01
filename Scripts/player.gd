@@ -32,7 +32,6 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Shoot"):
 		var currentBullet = bullet.instantiate()
-		var bullspeed = 200
 		currentBullet.global_position = hand.global_position
 		#if get_local_mouse_position().x != 0 and get_local_mouse_position().y != 0:
 			#currentBullet.pos = (get_local_mouse_position()/abs(get_local_mouse_position()))
@@ -40,10 +39,14 @@ func _physics_process(delta: float) -> void:
 			#currentBullet.pos = Vector2(0, get_local_mouse_position().y/abs(get_local_mouse_position().y))
 		#elif get_local_mouse_position().y == 0:
 			#currentBullet.pos = Vector2(get_local_mouse_position().x/abs(get_local_mouse_position().x), 0)
-		currentBullet.apply_impulse(Vector2(), Vector2(bullspeed, 0).rotated(rotation))
-		add_child(currentBullet)
+		var direction_to_mouse = currentBullet.position.direction_to(get_global_mouse_position()).normalized()
+		currentBullet.look_at(direction_to_mouse)
+		currentBullet.rotation_degrees = hand.rotation_degrees
+		currentBullet.dir = direction_to_mouse
+		print(direction_to_mouse)
+		get_parent().add_child(currentBullet)
 
-		print(get_local_mouse_position())
+		#print(get_local_mouse_position())
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		pass
