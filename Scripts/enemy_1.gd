@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var player : PlayerController
 
-const speed = 150.0
+const speed = 125.0
 
 @onready var nav: NavigationAgent2D = $Nav
 var label

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dca1qtmrsim76"]
 
-[ext_resource type="Script" uid="uid://c1h42nppt2p2x" path="res://scripts/title_page.gd" id="1_u7noh"]
+[ext_resource type="Script" path="res://scripts/title_page.gd" id="1_u7noh"]
 [ext_resource type="Texture2D" uid="uid://csnj6yipvcfhe" path="res://Assets/pixil-frame-0 (4).png" id="2_lfgkp"]
 [ext_resource type="FontFile" uid="uid://dg83sfoi8gef8" path="res://Assets/KiwiSoda.ttf" id="3_0y7ru"]
 [ext_resource type="Texture2D" uid="uid://celj5mtgkumbj" path="res://Assets/pixil-frame-0 (3).png" id="4_hl4f0"]
