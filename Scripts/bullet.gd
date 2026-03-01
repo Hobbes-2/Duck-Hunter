@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name Bullet
-var speed = 500
+var speed = 800
 var pos
 var dir
 func _physics_process(delta: float) -> void:
