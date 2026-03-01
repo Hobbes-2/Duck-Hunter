@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1p7ya5t3acqq"]
+
+[ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://Scripts/enemy_1.gd" id="1_jwqgc"]
+
+[node name="Enemy1" type="CharacterBody2D" unique_id=792112215]
+script = ExtResource("1_jwqgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676871442]
+
+[node name="Nav" type="NavigationAgent2D" parent="." unique_id=180285085]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=194538346]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 1)
