@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b77f5n1pp7n8s"]
+
+[ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_jhtpm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvw4f"]
+size = Vector2(128, 128)
+
+[node name="Duck" type="AnimatedSprite2D" unique_id=1655506650]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=971578975]
+shape = SubResource("RectangleShape2D_tvw4f")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1355283713]
+texture = ExtResource("1_jhtpm")
+
+[node name="ColorRect" type="ColorRect" parent="Icon" unique_id=1516241023]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(1, 1, 0, 1)
