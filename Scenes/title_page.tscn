@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dca1qtmrsim76"]
+
+[node name="TitlePage" type="Node2D" unique_id=1063053476]
+
+[node name="Start" type="Button" parent="." unique_id=1956016255]
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 110.0
+offset_bottom = 135.0
+text = "Start"
+
+[node name="Label" type="Label" parent="." unique_id=384972348]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 417.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 50
+text = "TITLE GOES HERE"
+
+[node name="Quit" type="Button" parent="." unique_id=113996646]
+offset_left = 64.0
+offset_top = 144.0
+offset_right = 106.0
+offset_bottom = 175.0
+text = "Quit"

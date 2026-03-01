@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmyubm8d35e0q"]
 
-[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://scripts/card.gd" id="1_wf8id"]
+[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://Scripts/card.gd" id="1_wf8id"]
 [ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="2_brehn"]
 
 [node name="Card" type="CharacterBody2D" unique_id=1710167673]
@@ -20,6 +20,14 @@ offset_right = 117.588524
 offset_bottom = 105.36332
 color = Color(0.91885203, 0, 0.04235366, 1)
 
+[node name="DamageLabel" type="Label" parent="Icon/DamageCard" unique_id=1098506690]
+layout_mode = 0
+offset_left = 107.78948
+offset_top = 92.19292
+offset_right = 147.78949
+offset_bottom = 115.19292
+theme_override_font_sizes/font_size = 30
+
 [node name="HealthCard" type="ColorRect" parent="Icon" unique_id=80024378]
 visible = false
 offset_left = -127.387566
@@ -27,6 +35,14 @@ offset_top = -111.948555
 offset_right = 117.588524
 offset_bottom = 105.36332
 color = Color(1.92523e-06, 0.5686182, 0.20717669, 1)
+
+[node name="HealthLabel" type="Label" parent="Icon/HealthCard" unique_id=2089004036]
+layout_mode = 0
+offset_left = 107.78948
+offset_top = 85.60771
+offset_right = 147.78949
+offset_bottom = 108.60771
+theme_override_font_sizes/font_size = 30
 
 [node name="FirerateCard" type="ColorRect" parent="Icon" unique_id=1921239691]
 visible = false
@@ -36,16 +52,30 @@ offset_right = 117.588524
 offset_bottom = 105.36332
 color = Color(0.81727433, 0.00012196332, 0.6831345, 1)
 
+[node name="FirerateLabel" type="Label" parent="Icon/FirerateCard" unique_id=794100463]
+layout_mode = 0
+offset_left = 107.78948
+offset_top = 98.77813
+offset_right = 147.78949
+offset_bottom = 140.77814
+theme_override_font_sizes/font_size = 30
+
 [node name="SpeedCard" type="ColorRect" parent="Icon" unique_id=754983596]
-visible = false
 offset_left = -127.387566
 offset_top = -111.948555
 offset_right = 117.588524
 offset_bottom = 105.36332
 color = Color(0, 0.59627956, 0.7025012, 1)
 
+[node name="SpeedLabel" type="Label" parent="Icon/SpeedCard" unique_id=1103571011]
+layout_mode = 0
+offset_left = 107.78948
+offset_top = 92.19292
+offset_right = 147.78949
+offset_bottom = 115.19292
+theme_override_font_sizes/font_size = 30
+
 [node name="Button" type="Button" parent="." unique_id=822720584]
-visible = false
 offset_left = -104.0
 offset_top = -136.0
 offset_right = 96.0
