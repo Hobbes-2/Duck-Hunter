@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b4t4jwd0spd4l"]
+
+[ext_resource type="Texture2D" uid="uid://bhmwad8jcuii6" path="res://Assets/CardArtDamage.png" id="1_13qob"]
+[ext_resource type="Script" uid="uid://cikkyyb67lbrv" path="res://Scenes/Cards/damage_card.gd" id="2_5xgfy"]
+
+[node name="DamageCard" type="Sprite2D" unique_id=1869831288]
+z_index = 2
+texture = ExtResource("1_13qob")
+script = ExtResource("2_5xgfy")
+
+[node name="DamageButton" type="Button" parent="." unique_id=548545281]
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.59809
+offset_top = -26.340858
+offset_right = 19.598093
+offset_bottom = 32.926018
+
+[connection signal="pressed" from="DamageButton" to="." method="_on_damage_button_pressed"]

@@ -29,3 +29,7 @@ func reset():
 	flowers = BASEflowers
 	round = BASEround
 	round_over = false
+
+func _physics_process(delta: float) -> void:
+	if round_over:
+		get_tree().change_scene_to_file("res://Scenes/card.tscn")

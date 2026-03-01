@@ -21,8 +21,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	if health <= 0:
-		queue_free()
 		MainGlobal.flowers += 1
+		#get_parent().get_parent().totalEnemies -= 1
+		#print(get_parent().totalEnemies)
+		queue_free()
 
 
 	label.text = "Flowers:" + str(MainGlobal.flowers)

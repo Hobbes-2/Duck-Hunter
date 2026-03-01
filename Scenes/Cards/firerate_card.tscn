@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c6movv1pn7efp"]
+
+[ext_resource type="Texture2D" uid="uid://bmqyyp165r3sh" path="res://Assets/CardArtFirerate.png" id="1_pstpm"]
+[ext_resource type="Script" uid="uid://bapk72hlmju0m" path="res://Scenes/Cards/firerate_card.gd" id="2_uyiem"]
+
+[node name="firerate_card" type="Sprite2D" unique_id=102853366]
+z_index = 2
+texture = ExtResource("1_pstpm")
+script = ExtResource("2_uyiem")
+
+[node name="FirerateButton" type="Button" parent="." unique_id=882484641]
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.598083
+offset_top = -26.34083
+offset_right = 19.598114
+offset_bottom = 32.92604
+
+[connection signal="pressed" from="FirerateButton" to="." method="_on_firerate_button_pressed"]

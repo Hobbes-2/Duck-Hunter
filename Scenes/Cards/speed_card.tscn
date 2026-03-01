@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://byr80sr1n3ny7"]
+
+[ext_resource type="Texture2D" uid="uid://dtobwnmcpre7p" path="res://Assets/CardArtSpeed.png" id="1_0tf0a"]
+[ext_resource type="Script" uid="uid://ctuv1v3wjfmuo" path="res://Scenes/Cards/speed_card.gd" id="2_w3s1o"]
+
+[node name="speed_card" type="Sprite2D" unique_id=644061910]
+texture = ExtResource("1_0tf0a")
+script = ExtResource("2_w3s1o")
+
+[node name="SpeedButton" type="Button" parent="." unique_id=1562524234]
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.598091
+offset_top = -26.340836
+offset_right = 19.598076
+offset_bottom = 32.926033
+
+[connection signal="pressed" from="SpeedButton" to="." method="_on_speed_button_pressed"]
