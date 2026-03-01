@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
+size = Vector2(144, 144)
+
 [node name="Player" type="CharacterBody2D" unique_id=575605269]
 script = ExtResource("1_cvnsp")
 
@@ -44,3 +47,10 @@ theme_override_font_sizes/font_size = 30
 [node name="RoundLabel" type="Label" parent="Camera2D" unique_id=676500963]
 offset_right = 40.0
 offset_bottom = 23.0
+[node name="Hitbox" type="Area2D" parent="." unique_id=650216147]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1320248380]
+shape = SubResource("RectangleShape2D_6t5aa")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
