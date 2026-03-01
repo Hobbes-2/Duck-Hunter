@@ -23,5 +23,5 @@ offset_bottom = 136.0
 [node name="Player" parent="." unique_id=575605269 instance=ExtResource("1_jjgbg")]
 
 [node name="Enemy1" parent="." unique_id=792112215 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(-368, 80)
+position = Vector2(-360, -40)
 player = NodePath("../Player")
