@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b77f5n1pp7n8s"]
+
+[ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_jhtpm"]
+[ext_resource type="Script" uid="uid://dwwp21gn05d1e" path="res://scripts/area_2d.gd" id="2_tvw4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvw4f"]
+size = Vector2(128, 128)
+
+[node name="Duck" type="AnimatedSprite2D" unique_id=1655506650]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1355283713]
+texture = ExtResource("1_jhtpm")
+
+[node name="ColorRect" type="ColorRect" parent="Icon" unique_id=1516241023]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(1, 1, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=868770218]
+script = ExtResource("2_tvw4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=971578975]
+shape = SubResource("RectangleShape2D_tvw4f")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
