@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bm48u8lhnikrs"]
 
 [ext_resource type="Script" uid="uid://c4qpxc8r3j588" path="res://scripts/death.gd" id="1_g62mh"]
+[ext_resource type="FontFile" uid="uid://dg83sfoi8gef8" path="res://Assets/KiwiSoda.ttf" id="1_mna5k"]
 
 [node name="Death" type="Label" unique_id=544501251]
 offset_top = 64.0
 offset_right = 1152.0
 offset_bottom = 632.0
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("1_mna5k")
+theme_override_font_sizes/font_size = 120
 text = "You died!
 Want to try again?"
 horizontal_alignment = 1
@@ -18,8 +20,9 @@ offset_left = 168.0
 offset_top = 320.0
 offset_right = 488.0
 offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("1_mna5k")
 theme_override_font_sizes/font_size = 60
-text = "Yes"
+text = "Yes!!!!"
 
 [node name="NoButton" type="Button" parent="." unique_id=1589142113]
 layout_mode = 0
@@ -27,8 +30,9 @@ offset_left = 728.0
 offset_top = 320.0
 offset_right = 1048.0
 offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("1_mna5k")
 theme_override_font_sizes/font_size = 60
-text = "No"
+text = "No..."
 
 [connection signal="pressed" from="YesButton" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]

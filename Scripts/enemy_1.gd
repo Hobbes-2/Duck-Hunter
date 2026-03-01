@@ -7,7 +7,7 @@ const speed = 150.0
 @onready var nav: NavigationAgent2D = $Nav
 var label
 
-var health = 4
+var health = 3
 
 func _ready() -> void:
 	label = player.label
