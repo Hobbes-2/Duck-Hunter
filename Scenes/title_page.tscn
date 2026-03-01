@@ -1,33 +1,70 @@
 [gd_scene format=3 uid="uid://dca1qtmrsim76"]
 
 [ext_resource type="Script" uid="uid://c1h42nppt2p2x" path="res://scripts/title_page.gd" id="1_u7noh"]
+[ext_resource type="Texture2D" uid="uid://csnj6yipvcfhe" path="res://Assets/pixil-frame-0 (4).png" id="2_lfgkp"]
+[ext_resource type="FontFile" uid="uid://dg83sfoi8gef8" path="res://Assets/KiwiSoda.ttf" id="3_0y7ru"]
+[ext_resource type="Texture2D" uid="uid://celj5mtgkumbj" path="res://Assets/pixil-frame-0 (3).png" id="4_hl4f0"]
+[ext_resource type="Texture2D" uid="uid://momcl5yrj6m3" path="res://Assets/pixil-frame-0.png" id="5_sx5cq"]
+[ext_resource type="Texture2D" uid="uid://duxwqwetf4mfj" path="res://Assets/pixil-frame-0 (1).png" id="6_k14dy"]
 
 [node name="TitlePage" type="Node2D" unique_id=1063053476]
 script = ExtResource("1_u7noh")
 
+[node name="PixilFrame0(4)" type="Sprite2D" parent="." unique_id=1415387428]
+position = Vector2(569.5, 320)
+scale = Vector2(1.7923077, 1)
+texture = ExtResource("2_lfgkp")
+
 [node name="Start" type="Button" parent="." unique_id=1956016255]
 offset_left = 128.0
-offset_top = 320.0
+offset_top = 464.0
 offset_right = 448.0
-offset_bottom = 512.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("3_0y7ru")
 theme_override_font_sizes/font_size = 60
 text = "Start"
 
 [node name="Label" type="Label" parent="." unique_id=384972348]
-offset_left = 112.0
-offset_top = 8.0
-offset_right = 1031.0
-offset_bottom = 213.0
+offset_left = 136.0
+offset_right = 1055.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("3_0y7ru")
 theme_override_font_sizes/font_size = 150
 text = "Duck Hunter"
+horizontal_alignment = 1
 
 [node name="Quit" type="Button" parent="." unique_id=113996646]
 offset_left = 704.0
-offset_top = 320.0
+offset_top = 464.0
 offset_right = 1024.0
-offset_bottom = 512.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("3_0y7ru")
 theme_override_font_sizes/font_size = 60
 text = "Quit"
+
+[node name="PixilFrame0(3)" type="Sprite2D" parent="." unique_id=16070964]
+position = Vector2(272, 184)
+rotation = 0.19628401
+scale = Vector2(6, 6)
+texture = ExtResource("4_hl4f0")
+
+[node name="PixilFrame0(3)2" type="Sprite2D" parent="." unique_id=1252413577]
+position = Vector2(304, 352.00003)
+rotation = -0.06955303
+scale = Vector2(6, 6)
+texture = ExtResource("4_hl4f0")
+
+[node name="PixilFrame0" type="Sprite2D" parent="." unique_id=1330975177]
+position = Vector2(878, 274)
+scale = Vector2(9.124999, 9.875)
+texture = ExtResource("5_sx5cq")
+flip_h = true
+
+[node name="PixilFrame0(1)" type="Sprite2D" parent="." unique_id=795804154]
+position = Vector2(648, 352)
+scale = Vector2(4.9375005, 5.6250005)
+texture = ExtResource("6_k14dy")
+flip_h = true
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

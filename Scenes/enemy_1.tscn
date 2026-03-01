@@ -1,32 +1,34 @@
 [gd_scene format=3 uid="uid://c1p7ya5t3acqq"]
 
 [ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://scripts/enemy_1.gd" id="1_jwqgc"]
+[ext_resource type="Texture2D" uid="uid://celj5mtgkumbj" path="res://Assets/pixil-frame-0 (3).png" id="2_0a874"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqgc"]
-size = Vector2(48, 48)
+size = Vector2(30, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0a874"]
-size = Vector2(64, 64)
+size = Vector2(40, 40)
 
 [node name="Enemy1" type="CharacterBody2D" unique_id=792112215 groups=["Enemy"]]
 collision_mask = 2
 script = ExtResource("1_jwqgc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676871442]
+position = Vector2(-3, 3)
 shape = SubResource("RectangleShape2D_jwqgc")
 
 [node name="Nav" type="NavigationAgent2D" parent="." unique_id=180285085]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=194538346]
-offset_left = -24.0
-offset_top = -24.0
-offset_right = 24.0
-offset_bottom = 24.0
-color = Color(1, 0, 0, 1)
-
 [node name="Hitbox" type="Area2D" parent="." unique_id=315651550]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=777762421]
+position = Vector2(-2.5, 2)
+scale = Vector2(0.86, 0.86)
 shape = SubResource("RectangleShape2D_0a874")
+
+[node name="PixilFrame0(3)" type="Sprite2D" parent="." unique_id=1981764042]
+position = Vector2(1, -6)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_0a874")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
