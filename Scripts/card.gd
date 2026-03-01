@@ -4,11 +4,10 @@ extends CharacterBody2D
 @export var damagemod : int
 @export var fireratemod : int
 @export var healthmod : int
-@onready var damage_card: ColorRect = $Icon/DamageCard
-@onready var health_card: ColorRect = $Icon/HealthCard
-@onready var firerate_card: ColorRect = $Icon/FirerateCard
-@onready var speed_card: ColorRect = $Icon/SpeedCard
-@onready var card_back: ColorRect = $Icon/CardBack
+@onready var damage_card: Sprite2D = $Icon/DamageCard
+@onready var health_card: Sprite2D = $Icon/HealthCard
+@onready var firerate_card: Sprite2D = $Icon/FirerateCard
+@onready var speed_card: Sprite2D = $Icon/SpeedCard
 
 var types: Array = ["DamageCard", "HealthCard", 
 "FirerateCard", "SpeedCard"]
