@@ -11,9 +11,18 @@ var health = MainGlobal.health
 @onready var hand_sprite: Sprite2D = $Arm/HandSprite
 @onready var label: Label = $Camera2D/Label
 var bullet = preload("res://Scenes/bullet.tscn")
+@onready var camera_2d: Camera2D = $Camera2D
+
+@export var lb : Node2D
+@export var rb : Node2D
+@export var ub : Node2D
+@export var bb : Node2D
 
 func _ready() -> void:
-	pass
+	camera_2d.limit_left = lb.global_position.x
+	camera_2d.limit_right = rb.global_position.x
+	camera_2d.limit_top = ub.global_position.y
+	camera_2d.limit_bottom = bb.global_position.y
 
 func _physics_process(delta: float) -> void:
 
