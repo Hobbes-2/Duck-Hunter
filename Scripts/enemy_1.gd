@@ -10,6 +10,7 @@ var label
 var health = 3
 
 func _ready() -> void:
+	health += MainGlobal.round
 	label = player.label
 
 func _physics_process(delta: float) -> void:
