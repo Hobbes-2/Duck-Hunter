@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bmyubm8d35e0q"]
+
+[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://scripts/card.gd" id="1_wf8id"]
+[ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="2_brehn"]
+
+[node name="Card" type="CharacterBody2D" unique_id=1710167673]
+script = ExtResource("1_wf8id")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=342993071]
+position = Vector2(0, -1.9073486e-06)
+scale = Vector2(0.8164062, 1.2148438)
+texture = ExtResource("2_brehn")
+
+[node name="ColorRect" type="ColorRect" parent="Icon" unique_id=993385860]
+offset_left = -58.794262
+offset_top = -59.266876
+offset_right = 58.794262
+offset_bottom = 59.26687
+color = Color(0, 1, 1, 1)
