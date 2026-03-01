@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://bmyubm8d35e0q"]
 
-[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://scripts/card.gd" id="1_wf8id"]
+[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://Scripts/card.gd" id="1_wf8id"]
 [ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="2_brehn"]
 
 [node name="Card" type="CharacterBody2D" unique_id=1710167673]
 script = ExtResource("1_wf8id")
-speedmod = 10
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=342993071]
 position = Vector2(0, -1.9073486e-06)
@@ -28,6 +27,11 @@ offset_right = 147.78949
 offset_bottom = 115.19292
 theme_override_font_sizes/font_size = 30
 
+[node name="DamageButton" type="Button" parent="Icon/DamageCard" unique_id=417953724]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="HealthCard" type="ColorRect" parent="Icon" unique_id=80024378]
 visible = false
 offset_left = -127.387566
@@ -43,6 +47,11 @@ offset_top = 85.60771
 offset_right = 147.78949
 offset_bottom = 108.60771
 theme_override_font_sizes/font_size = 30
+
+[node name="HealthButton" type="Button" parent="Icon/HealthCard" unique_id=1338339701]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="FirerateCard" type="ColorRect" parent="Icon" unique_id=1921239691]
 visible = false
@@ -60,6 +69,11 @@ offset_right = 147.78949
 offset_bottom = 140.77814
 theme_override_font_sizes/font_size = 30
 
+[node name="FirerateButton" type="Button" parent="Icon/FirerateCard" unique_id=1375403630]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="SpeedCard" type="ColorRect" parent="Icon" unique_id=754983596]
 offset_left = -127.387566
 offset_top = -111.948555
@@ -75,10 +89,19 @@ offset_right = 147.78949
 offset_bottom = 115.19292
 theme_override_font_sizes/font_size = 30
 
+[node name="SpeedButton" type="Button" parent="Icon/SpeedCard" unique_id=836543852]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="Button" type="Button" parent="." unique_id=822720584]
 offset_left = -104.0
 offset_top = -136.0
 offset_right = 96.0
 offset_bottom = 128.0
 
+[connection signal="pressed" from="Icon/DamageCard/DamageButton" to="." method="_on_damage_button_pressed"]
+[connection signal="pressed" from="Icon/HealthCard/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="Icon/FirerateCard/FirerateButton" to="." method="_on_firerate_button_pressed"]
+[connection signal="pressed" from="Icon/SpeedCard/SpeedButton" to="." method="_on_speed_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

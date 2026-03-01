@@ -13,3 +13,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if totalEnemies <= 0:
 		MainGlobal.round += 1
+		MainGlobal.round_over = true

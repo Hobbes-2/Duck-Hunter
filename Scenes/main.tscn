@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cwfu7i823c6cc" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://c1p7ya5t3acqq" path="res://Scenes/enemy_1.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://cik8q1r57271o" path="res://Scenes/spawner.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bmyubm8d35e0q" path="res://Scenes/card.tscn" id="5_kry3j"]
 
 [node name="Main" type="Node2D" unique_id=1523394194]
 script = ExtResource("1_jjvhh")
@@ -32,9 +33,16 @@ player = NodePath("../Player")
 [node name="Spawner" parent="." unique_id=854759600 node_paths=PackedStringArray("player") instance=ExtResource("3_8gbba")]
 position = Vector2(-408, -72)
 enemiesToSpawn = 10
+rate = 1.0
 player = NodePath("../Player")
 
 [node name="Spawner2" parent="." unique_id=4819496 node_paths=PackedStringArray("player") instance=ExtResource("3_8gbba")]
 position = Vector2(344, -216)
 enemiesToSpawn = 10
+rate = 1.0
 player = NodePath("../Player")
+
+[node name="Card" parent="." unique_id=1710167673 instance=ExtResource("5_kry3j")]
+damagemod = 10
+fireratemod = 10
+healthmod = 10
