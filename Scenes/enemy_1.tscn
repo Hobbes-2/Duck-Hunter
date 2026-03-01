@@ -8,6 +8,7 @@ script = ExtResource("1_jwqgc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676871442]
 
 [node name="Nav" type="NavigationAgent2D" parent="." unique_id=180285085]
+target_desired_distance = 0.1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=194538346]
 offset_right = 40.0
