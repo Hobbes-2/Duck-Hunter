@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 
 
-	label.text = "Flowers:" + str(MainGlobal.flowers)
+	label.text = "Enemies Killed: " + str(MainGlobal.flowers)
 
 func _on_hitbox_body_entered(body):
 	if !body.is_in_group("Enemy"):
