@@ -20,10 +20,6 @@ texture = ExtResource("1_v0iea")
 [node name="Hand" type="CharacterBody2D" parent="Arm" unique_id=1750588425]
 position = Vector2(128, 0)
 
-[node name="ColorRect" type="ColorRect" parent="Arm/Hand" unique_id=1068944695]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1629004851]
 shape = SubResource("RectangleShape2D_cvnsp")
 
