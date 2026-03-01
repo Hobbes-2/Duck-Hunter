@@ -3,6 +3,7 @@ class_name PlayerController
 
 
 var speed = MainGlobal.speed
+var health = MainGlobal.health
 
 #Arm parts 
 @onready var arm: CharacterBody2D = $Arm
@@ -46,8 +47,15 @@ func _physics_process(delta: float) -> void:
 		currentBullet.dir = direction_to_mouse
 		print(direction_to_mouse)
 		get_parent().add_child(currentBullet)
+		
+	if health <= 0:
+		get_tree().change_scene_to_file("res://Scenes/death.tscn")
 
 		#print(get_local_mouse_position())
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		pass
+
+func _on_hitbox_body_entered(body):
+	health -= 1
+	print("dying")
