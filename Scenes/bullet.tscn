@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://b5htjyh3pjxtg"]
 
-[ext_resource type="Script" uid="uid://w4erynfphwao" path="res://Scripts/bullet.gd" id="1_oduel"]
+[ext_resource type="Script" uid="uid://w4erynfphwao" path="res://scripts/bullet.gd" id="1_oduel"]
 [ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_xjght"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oduel"]
 radius = 16.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ycag2"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oduel"]
 
 [node name="Bullet" type="CharacterBody2D" unique_id=2079537301]
+collision_mask = 2
 script = ExtResource("1_oduel")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1901212063]
@@ -21,5 +22,5 @@ position = Vector2(0, 2.3841858e-07)
 scale = Vector2(0.17773438, 0.18359375)
 texture = ExtResource("1_xjght")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=279626812]
-shape = SubResource("CircleShape2D_ycag2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1987506815]
+shape = SubResource("RectangleShape2D_oduel")

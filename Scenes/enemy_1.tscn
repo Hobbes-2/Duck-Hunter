@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://c1p7ya5t3acqq"]
 
-[ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://Scripts/enemy_1.gd" id="1_jwqgc"]
+[ext_resource type="Script" uid="uid://dlps6x0snxvxw" path="res://scripts/enemy_1.gd" id="1_jwqgc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqgc"]
 size = Vector2(48, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0a874"]
-size = Vector2(48, 48)
+size = Vector2(64, 64)
 
 [node name="Enemy1" type="CharacterBody2D" unique_id=792112215]
+collision_mask = 2
 script = ExtResource("1_jwqgc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676871442]
@@ -27,3 +28,5 @@ color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=777762421]
 shape = SubResource("RectangleShape2D_0a874")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

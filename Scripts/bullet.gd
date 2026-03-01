@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Bullet
 var speed = 500
 var pos
 var dir
