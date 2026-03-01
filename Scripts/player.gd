@@ -8,6 +8,7 @@ var speed = MainGlobal.speed
 @onready var arm: CharacterBody2D = $Arm
 @onready var hand: Node2D = $Arm/Hand
 @onready var hand_sprite: Sprite2D = $Arm/HandSprite
+@onready var label: Label = $Camera2D/Label
 var bullet = preload("res://Scenes/bullet.tscn")
 
 func _ready() -> void:
