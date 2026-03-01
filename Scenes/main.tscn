@@ -94,6 +94,7 @@ position = Vector2(288, 104)
 enemiesToSpawn = 5
 rate = 1.0
 player = NodePath("../Player")
+yes = true
 
 [node name="Node2D" type="Node2D" parent="." unique_id=480789285]
 position = Vector2(-480, -24)

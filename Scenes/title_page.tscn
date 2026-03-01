@@ -15,33 +15,6 @@ position = Vector2(569.5, 320)
 scale = Vector2(1.7923077, 1)
 texture = ExtResource("2_lfgkp")
 
-[node name="Start" type="Button" parent="." unique_id=1956016255]
-offset_left = 128.0
-offset_top = 464.0
-offset_right = 448.0
-offset_bottom = 616.0
-theme_override_fonts/font = ExtResource("3_0y7ru")
-theme_override_font_sizes/font_size = 60
-text = "Start"
-
-[node name="Label" type="Label" parent="." unique_id=384972348]
-offset_left = 136.0
-offset_right = 1055.0
-offset_bottom = 205.0
-theme_override_fonts/font = ExtResource("3_0y7ru")
-theme_override_font_sizes/font_size = 150
-text = "Duck Hunter"
-horizontal_alignment = 1
-
-[node name="Quit" type="Button" parent="." unique_id=113996646]
-offset_left = 704.0
-offset_top = 464.0
-offset_right = 1024.0
-offset_bottom = 616.0
-theme_override_fonts/font = ExtResource("3_0y7ru")
-theme_override_font_sizes/font_size = 60
-text = "Quit"
-
 [node name="PixilFrame0(3)" type="Sprite2D" parent="." unique_id=16070964]
 position = Vector2(272, 184)
 rotation = 0.19628401
@@ -65,6 +38,35 @@ position = Vector2(648, 352)
 scale = Vector2(4.9375005, 5.6250005)
 texture = ExtResource("6_k14dy")
 flip_h = true
+
+[node name="Start" type="Button" parent="." unique_id=1956016255]
+z_index = 2
+offset_left = 128.0
+offset_top = 464.0
+offset_right = 448.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("3_0y7ru")
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[node name="Label" type="Label" parent="." unique_id=384972348]
+offset_left = 136.0
+offset_right = 1055.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("3_0y7ru")
+theme_override_font_sizes/font_size = 150
+text = "Duck Hunter"
+horizontal_alignment = 1
+
+[node name="Quit" type="Button" parent="." unique_id=113996646]
+z_index = 2
+offset_left = 704.0
+offset_top = 464.0
+offset_right = 1024.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("3_0y7ru")
+theme_override_font_sizes/font_size = 60
+text = "Quit"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
