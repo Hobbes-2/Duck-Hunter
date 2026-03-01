@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bmyubm8d35e0q"]
 
-[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://scripts/card.gd" id="1_wf8id"]
-[ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="2_brehn"]
+[ext_resource type="Script" uid="uid://dujw7ixht2ovr" path="res://Scripts/card.gd" id="1_wf8id"]
+[ext_resource type="Texture2D" uid="uid://ihaygos7k7vw" path="res://Assets/CardArt.png" id="2_wf8id"]
 
 [node name="Card" type="CharacterBody2D" unique_id=1710167673]
 script = ExtResource("1_wf8id")
@@ -9,39 +9,34 @@ script = ExtResource("1_wf8id")
 [node name="Icon" type="Sprite2D" parent="." unique_id=342993071]
 position = Vector2(0, -1.9073486e-06)
 scale = Vector2(0.8164062, 1.2148438)
-texture = ExtResource("2_brehn")
 
-[node name="DamageCard" type="ColorRect" parent="Icon" unique_id=993385860]
+[node name="DamageCard" type="Sprite2D" parent="Icon" unique_id=425542593]
 visible = false
-offset_left = -127.387566
-offset_top = -111.948555
-offset_right = 117.588524
-offset_bottom = 105.36332
-color = Color(0.91885203, 0, 0.04235366, 1)
+position = Vector2(-156.7847, -7.6293945e-06)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wf8id")
 
 [node name="DamageLabel" type="Label" parent="Icon/DamageCard" unique_id=1098506690]
-layout_mode = 0
-offset_left = 107.78948
-offset_top = 92.19292
-offset_right = 147.78949
-offset_bottom = 115.19292
+offset_left = -9.799042
+offset_top = -19.755638
+offset_right = 9.799042
+offset_bottom = 22.244362
 theme_override_font_sizes/font_size = 30
 
 [node name="DamageButton" type="Button" parent="Icon/DamageCard" unique_id=417953724]
-layout_mode = 0
-offset_right = 244.97609
-offset_bottom = 217.31187
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.59809
+offset_top = -26.340858
+offset_right = 19.598093
+offset_bottom = 32.926018
 
-[node name="HealthCard" type="ColorRect" parent="Icon" unique_id=80024378]
+[node name="HealthCard" type="Sprite2D" parent="Icon" unique_id=1747433509]
 visible = false
-offset_left = -127.387566
-offset_top = -111.948555
-offset_right = 117.588524
-offset_bottom = 105.36332
-color = Color(1.92523e-06, 0.5686182, 0.20717669, 1)
+position = Vector2(-78.39235, -7.6293945e-06)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wf8id")
 
 [node name="HealthLabel" type="Label" parent="Icon/HealthCard" unique_id=2089004036]
-layout_mode = 0
 offset_left = 107.78948
 offset_top = 85.60771
 offset_right = 147.78949
@@ -49,20 +44,18 @@ offset_bottom = 108.60771
 theme_override_font_sizes/font_size = 30
 
 [node name="HealthButton" type="Button" parent="Icon/HealthCard" unique_id=1338339701]
-layout_mode = 0
-offset_right = 244.97609
-offset_bottom = 217.31187
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.598085
+offset_top = -26.340843
+offset_right = 19.598097
+offset_bottom = 32.926033
 
-[node name="FirerateCard" type="ColorRect" parent="Icon" unique_id=1921239691]
+[node name="FirerateCard" type="Sprite2D" parent="Icon" unique_id=1021034077]
 visible = false
-offset_left = -127.387566
-offset_top = -111.948555
-offset_right = 117.588524
-offset_bottom = 105.36332
-color = Color(0.81727433, 0.00012196332, 0.6831345, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wf8id")
 
 [node name="FirerateLabel" type="Label" parent="Icon/FirerateCard" unique_id=794100463]
-layout_mode = 0
 offset_left = 107.78948
 offset_top = 98.77813
 offset_right = 147.78949
@@ -70,20 +63,19 @@ offset_bottom = 140.77814
 theme_override_font_sizes/font_size = 30
 
 [node name="FirerateButton" type="Button" parent="Icon/FirerateCard" unique_id=1375403630]
-layout_mode = 0
-offset_right = 244.97609
-offset_bottom = 217.31187
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.598083
+offset_top = -26.34083
+offset_right = 19.598114
+offset_bottom = 32.92604
 
-[node name="SpeedCard" type="ColorRect" parent="Icon" unique_id=754983596]
+[node name="SpeedCard" type="Sprite2D" parent="Icon" unique_id=179787583]
 visible = false
-offset_left = -127.387566
-offset_top = -111.948555
-offset_right = 117.588524
-offset_bottom = 105.36332
-color = Color(0, 0.59627956, 0.7025012, 1)
+position = Vector2(-235.17706, -7.6293945e-06)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wf8id")
 
 [node name="SpeedLabel" type="Label" parent="Icon/SpeedCard" unique_id=1103571011]
-layout_mode = 0
 offset_left = 107.78948
 offset_top = 92.19292
 offset_right = 147.78949
@@ -91,9 +83,11 @@ offset_bottom = 115.19292
 theme_override_font_sizes/font_size = 30
 
 [node name="SpeedButton" type="Button" parent="Icon/SpeedCard" unique_id=836543852]
-layout_mode = 0
-offset_right = 244.97609
-offset_bottom = 217.31187
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.598091
+offset_top = -26.340836
+offset_right = 19.598076
+offset_bottom = 32.926033
 
 [node name="Button" type="Button" parent="." unique_id=822720584]
 visible = false
@@ -103,12 +97,12 @@ offset_right = 96.0
 offset_bottom = 128.0
 
 [node name="SpawnPoint1" type="Node2D" parent="." unique_id=1092728420]
-position = Vector2(-256, 0)
+position = Vector2(-64, 0)
 
 [node name="SpawnPoint2" type="Node2D" parent="." unique_id=531517434]
 
 [node name="SpawnPoint3" type="Node2D" parent="." unique_id=279943040]
-position = Vector2(256, 0)
+position = Vector2(64, 0)
 
 [connection signal="pressed" from="Icon/DamageCard/DamageButton" to="." method="_on_damage_button_pressed"]
 [connection signal="pressed" from="Icon/HealthCard/HealthButton" to="." method="_on_health_button_pressed"]
