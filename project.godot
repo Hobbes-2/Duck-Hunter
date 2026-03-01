@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Duck Hunter"
-run/main_scene="uid://bji4vbijl8o0q"
+run/main_scene="uid://dca1qtmrsim76"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

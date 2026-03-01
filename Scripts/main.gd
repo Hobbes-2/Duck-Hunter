@@ -1,6 +1,7 @@
 extends Node2D
 
 var totalEnemies = 0
+@onready var player: PlayerController = $Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,5 +21,4 @@ func _process(delta: float) -> void:
 	print(totalEnemies)
 
 	if totalEnemies <= 0:
-		MainGlobal.round += 1
 		MainGlobal.round_over = true

@@ -12,6 +12,7 @@ var health = MainGlobal.health
 @onready var label: Label = $Camera2D/Label
 var bullet = preload("res://Scenes/bullet.tscn")
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var round_label: Label = $Camera2D/RoundLabel
 
 @export var lb : Node2D
 @export var rb : Node2D
@@ -25,6 +26,8 @@ func _ready() -> void:
 	camera_2d.limit_bottom = bb.global_position.y
 
 func _physics_process(delta: float) -> void:
+
+	round_label.text = "Wave: " + str(MainGlobal.round)
 
 #Left is -1, right is 1
 	var directionLR := Input.get_axis("Left", "Right")
