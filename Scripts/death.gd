@@ -2,11 +2,13 @@ extends Label
 
 @onready var yes_button: Button = $YesButton
 @onready var no_button: Button = $NoButton
+@onready var label: Label = $Label
+@onready var label_2: Label = $Label2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	label.text = "Final Wave: " + str(MainGlobal.round)
+	label_2.text = "Final Score: " + str(MainGlobal.flowers)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
