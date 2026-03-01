@@ -29,8 +29,8 @@ theme_override_font_sizes/font_size = 30
 
 [node name="DamageButton" type="Button" parent="Icon/DamageCard" unique_id=417953724]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 244.97609
+offset_bottom = 217.31187
 
 [node name="HealthCard" type="ColorRect" parent="Icon" unique_id=80024378]
 visible = false
@@ -50,8 +50,8 @@ theme_override_font_sizes/font_size = 30
 
 [node name="HealthButton" type="Button" parent="Icon/HealthCard" unique_id=1338339701]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 244.97609
+offset_bottom = 217.31187
 
 [node name="FirerateCard" type="ColorRect" parent="Icon" unique_id=1921239691]
 visible = false
@@ -71,10 +71,11 @@ theme_override_font_sizes/font_size = 30
 
 [node name="FirerateButton" type="Button" parent="Icon/FirerateCard" unique_id=1375403630]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 244.97609
+offset_bottom = 217.31187
 
 [node name="SpeedCard" type="ColorRect" parent="Icon" unique_id=754983596]
+visible = false
 offset_left = -127.387566
 offset_top = -111.948555
 offset_right = 117.588524
@@ -91,14 +92,23 @@ theme_override_font_sizes/font_size = 30
 
 [node name="SpeedButton" type="Button" parent="Icon/SpeedCard" unique_id=836543852]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 244.97609
+offset_bottom = 217.31187
 
 [node name="Button" type="Button" parent="." unique_id=822720584]
+visible = false
 offset_left = -104.0
 offset_top = -136.0
 offset_right = 96.0
 offset_bottom = 128.0
+
+[node name="SpawnPoint1" type="Node2D" parent="." unique_id=1092728420]
+position = Vector2(-256, 0)
+
+[node name="SpawnPoint2" type="Node2D" parent="." unique_id=531517434]
+
+[node name="SpawnPoint3" type="Node2D" parent="." unique_id=279943040]
+position = Vector2(256, 0)
 
 [connection signal="pressed" from="Icon/DamageCard/DamageButton" to="." method="_on_damage_button_pressed"]
 [connection signal="pressed" from="Icon/HealthCard/HealthButton" to="." method="_on_health_button_pressed"]
