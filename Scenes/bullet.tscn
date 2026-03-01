@@ -3,16 +3,12 @@
 [ext_resource type="Script" uid="uid://w4erynfphwao" path="res://Scripts/bullet.gd" id="1_oduel"]
 [ext_resource type="Texture2D" uid="uid://cvqcw55q2hwqa" path="res://icon.svg" id="1_xjght"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oduel"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_oduel"]
 radius = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ycag2"]
 
-[node name="Bullet" type="RigidBody2D" unique_id=1229684428]
-physics_material_override = SubResource("PhysicsMaterial_oduel")
-gravity_scale = 0.0
+[node name="Bullet" type="CharacterBody2D" unique_id=2079537301]
 script = ExtResource("1_oduel")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1901212063]
